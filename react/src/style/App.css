@@ -1,0 +1,9 @@
+.external-style{
+    background-color: #c8ba9a ;
+    /* background-color: #80a7cf; */
+}
+
+.full-screen{
+    min-width: 100vw; 
+    min-height: 100vh; 
+}

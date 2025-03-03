@@ -1,0 +1,6 @@
+.shape{
+    background-color: #bfaa7a;
+    /* background-color: #0d4379; */
+    /* This clips the element so only the corners are rounded */
+    clip-path: inset(0 round 6px);
+}
