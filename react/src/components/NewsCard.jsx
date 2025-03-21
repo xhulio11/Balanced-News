@@ -3,6 +3,7 @@ import React, { useEffect,useState } from "react";
 import Card from "react-bootstrap/Card";
 import Placeholder from 'react-bootstrap/Placeholder';
 import { Link } from "react-router-dom";
+import "../style/NewsCard.css"
 
 function NewsCard ({ id, title, excerpt, imageUrl, date, length=200, variant = "default", }){
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -14,15 +15,6 @@ function NewsCard ({ id, title, excerpt, imageUrl, date, length=200, variant = "
 
   // // You could also apply other classes if needed for a “compact” look, such as `h-100`.
   const cardClass = variant === "compact" ? "h-100" : "";
-  // Simulate data fetching with useEffect (e.g., from an API)
-  useEffect(() => {
-    // Simulate a network request delay
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (           
     <Card className={`mb-3 ${cardClass}`}>
@@ -48,7 +40,7 @@ function NewsCard ({ id, title, excerpt, imageUrl, date, length=200, variant = "
           {/* You could place the date in a small text or in the subtitle area. */}
           <small className="text-muted d-block mb-2">{date}</small>
           <Link to={`/articles/${encodeURIComponent(id)}`} style={{ textDecoration: "none", color: "inherit" }}>
-            <Card.Title className="mb-2" style={{textDecorationLine:"underline"}}>
+            <Card.Title className="mb-2 show-underline">
               {title}
             </Card.Title>
           </Link>
