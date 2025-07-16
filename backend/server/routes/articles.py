@@ -8,7 +8,7 @@ def get_articles():
     db = get_db()  # Get database instance
     batch_size = int(request.args.get("batch_size", 2))
     prev_id = request.args.get("prev_id", None)
-    articles = db.get_articles(collection="google", batch_size=batch_size, prev_id=prev_id)
+    articles = db.get_articles(collection="llm_articles", batch_size=batch_size, prev_id=prev_id)
     
     return jsonify(articles)
 
@@ -17,6 +17,6 @@ def get_articles():
 def get_article(articleId): 
     print(articleId)
     db = get_db() 
-    article = db.get_article("google", articleId)
+    article = db.get_article(collection="llm_articles", article_id=articleId)
 
     return jsonify(article)

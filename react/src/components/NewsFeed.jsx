@@ -10,6 +10,7 @@ const NewsFeed = () => {
   // Initial 6 articles
   const [articles, setArticles] = useState(null); 
   const [loading, setLoading] = useState(true);
+  
   async function fetchMoreArticles(lastArticleId){
     const url = `/api/articles?prev_id=${lastArticleId._id}`
     try {
@@ -68,11 +69,11 @@ const NewsFeed = () => {
           <Col key={article._id}>
               <NewsCard 
                 id = {article._id}
-                title={article.content.slice(0,20)}
-                excerpt={article.content}
+                title={article.model.llama.title}
+                excerpt={article.model.llama.content}
                 length={200}
                 imageUrl={article.image}
-                date={"24-2-2024"}
+                date={article.date}
               />
             </Col>
           ))}

@@ -1,7 +1,6 @@
 // export default NewsCard;
 import React, { useEffect,useState } from "react";
 import Card from "react-bootstrap/Card";
-import Placeholder from 'react-bootstrap/Placeholder';
 import { Link } from "react-router-dom";
 import "../style/NewsCard.css"
 
