@@ -6,7 +6,7 @@ Balanced News is the implementation project for my Master’s thesis, **“Dev
 
 ## 🎓 Thesis context
 
-This research combines open‑weight large‑language models—**Meta Llama 3 8B** and **Mistral 7B‑v0.3**—with Hugging Face pipelines to:
+This research combines open‑weight large‑language models—**Meta Llama 3 8B**, **Mistral 7B‑v0.3** and **Deepseek 7B**—with Hugging Face pipelines to:
 
 1. **Collect** news via RSS and the News API.  
 2. **Embed & analyse** bias with zero‑shot classification and stylistic‑feature probes.  
